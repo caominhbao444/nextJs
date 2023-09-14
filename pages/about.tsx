@@ -2,16 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const router = useRouter()
-  function handleNavigate() {
-    router.push({ pathname: '/posts/[postID]', query: { postID: 1123 } })
-  }
   return (
     <>
       <Head>
@@ -21,9 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <button onClick={handleNavigate} style={{ padding: '10px', backgroundColor: 'red' }}>
-          Go to About
-        </button>
+        <h3>Hihi</h3>
       </main>
     </>
   )
